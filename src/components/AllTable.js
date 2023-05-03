@@ -1,4 +1,5 @@
 import React from 'react'
+
 import TableCard from "./TableCard";
 
 function AllTable({allData}) {
@@ -34,6 +35,8 @@ console.log('reaches');
       </table>
     </div>
   </>
+
+
   )
 }
 
