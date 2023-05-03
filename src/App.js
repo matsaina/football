@@ -14,6 +14,28 @@ import MatchDetails from "./components/MatchDetails";
 function App() {
   const [allData, SetAllData] = useState(footballdata);
 
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
+  const formattedDate = `${year}-${month}-${day}`;
+
+  // Public API Allows on 100 requests per day uncomment only when you want to request data
+
+  // useEffect(() => {
+  //     fetch(`https://v3.football.api-sports.io/fixtures?date=${formattedDate}`, {
+  //       method: "GET",
+  //       headers: {
+  //         "x-rapidapi-host": "v3.football.api-sports.io",
+  //         "x-rapidapi-key": "644f87f436e0173c10c96fb8fdc49308",
+  //       },
+  //     })
+  //       .then((response) => response.json())
+  //       .then((objects) => {
+  //         SetAllData(objects.response);
+  //       });
+  // }, [formattedDate]);
+
 
   return (
     <div>
