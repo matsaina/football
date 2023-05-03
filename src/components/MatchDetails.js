@@ -140,30 +140,6 @@ const deleteComment = (commentId) => {
     })
     .catch((error) => console.error(error));
 };
-// Delete a comment
-const EditComment = (commentId) => {
-  const game = data.find((game) => game.gameid == gameid);
-  const mainid = game.id;
-  const remdata = comments.filter((comment) => comment.id !== commentId);
-
-  fetch(`http://localhost:4000/games/${mainid}`, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      comments: remdata,
-    }),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      setComments(data.comments);
-    })
-    .catch((error) => console.error(error));
-};
-
-
-
 
 //Delete all comments
 const deleteAll = () => {
@@ -177,15 +153,9 @@ const deleteAll = () => {
    setComments([])
   });
 
-
-
-
 };
 
-
-
-
-  return (
+ return (
     <div className="container my-4">
       <div className="row">
         <div className="col-12">
@@ -214,7 +184,7 @@ const deleteAll = () => {
         </div>
       </div>
 
-{/* comments starts here*/}\
+{/* comments starts here*/}
 <div className="container my-4">
   <h2 className="text-center mb-4">Comments</h2>
   <div className="row">
