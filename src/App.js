@@ -12,6 +12,9 @@ import Profile from "./components/Profile";
 import MatchDetails from "./components/MatchDetails";
 
 function App() {
+  const [allData, SetAllData] = useState(footballdata);
+
+
   return (
     <div>
       <NavBar />
