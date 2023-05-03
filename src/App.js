@@ -12,8 +12,8 @@ import Profile from "./components/Profile";
 import MatchDetails from "./components/MatchDetails";
 
 function App() {
-  const [allData, SetAllData] = useState(footballdata);
-
+  const [allData, setMaindata] = useState(footballdata);
+  
   const today = new Date();
   const year = today.getFullYear();
   const month = String(today.getMonth() + 1).padStart(2, "0");
@@ -32,13 +32,27 @@ function App() {
   //     })
   //       .then((response) => response.json())
   //       .then((objects) => {
-  //         SetAllData(objects.response);
+  //         setMaindata(objects.response);
+  //         console.log(objects.response);
   //       });
   // }, [formattedDate]);
 
+  const handleSearch = (event) => {
+
+    const searchValue = event.target.value.toLowerCase();
+
+    setMaindata(allData.filter((team) => {
+      return team.teams.home.name.toLowerCase().includes(searchValue) || team.teams.away.name.toLowerCase().includes(searchValue);
+    }));
+
+  };
+
   return (
     <div>
-      <NavBar />
+
+
+      <NavBar handleSearch ={handleSearch} />
+     
 
       <div className="container-fluid">
         <div className="row">
@@ -46,7 +60,7 @@ function App() {
 
           <main role="main" className="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
             <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-              <h1 className="h2">Football App - {} </h1>
+              <h1 className="h2">Football App - {formattedDate} </h1>
             </div>
 
             <Routes>
