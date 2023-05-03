@@ -11,7 +11,7 @@ function TableCard() {
                   <td>Other</td>
                 </tr>
     
-    
+
     </>
   )
 }
