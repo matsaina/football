@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import TableCard from "./TableCard";
 
-function FinishedMatches({ allData }) {
-  const [FinishedData, SetFinishedData] = useState([]);
+function NotStarted({ allData }) {
+  const [NotStartData, SetNotStartData] = useState([]);
 
   useEffect(() => {
-    SetFinishedData(
+    SetNotStartData(
       allData.filter((live) => {
-        return live.fixture.status.short == "FT";
+        return live.fixture.status.short == "NS";
       })
     );
   }, [allData]);
 
   return (
     <>
-      <h2>Finished Games</h2>
+      <h2>Upcoming Games</h2>
       <div className="table-responsive">
         <table className="table table-striped table-sm">
           <thead>
@@ -29,7 +29,7 @@ function FinishedMatches({ allData }) {
             </tr>
           </thead>
           <tbody>
-            {FinishedData.map((team) => {
+            {NotStartData.map((team) => {
               return (
                 <>
                   <TableCard team={team} />
@@ -43,4 +43,4 @@ function FinishedMatches({ allData }) {
   );
 }
 
-export default FinishedMatches;
+export default NotStarted;

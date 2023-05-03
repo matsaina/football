@@ -36,7 +36,6 @@ function App() {
   //       });
   // }, [formattedDate]);
 
-
   return (
     <div>
       <NavBar />
