@@ -7,7 +7,7 @@ function NotStarted({ allData }) {
   useEffect(() => {
     SetNotStartData(
       allData.filter((live) => {
-        return live.fixture.status.short == "NS";
+        return live.fixture.status.short === "NS";
       })
     );
   }, [allData]);

@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import SideBar from "./components/SideBar";
 import NavBar from "./components/NavBar";
 import { useEffect, useState } from "react";
-import LiveTable from "./components/LiveTable";
+import LiveTable from "./components/Livetable";
 import AllTable from "./components/AllTable";
 import { Route, Routes } from "react-router-dom";
 import footballdata from "./data";
@@ -22,20 +22,20 @@ function App() {
 
   // Public API Allows on 100 requests per day uncomment only when you want to request data
 
-  // useEffect(() => {
-  //     fetch(`https://v3.football.api-sports.io/fixtures?date=${formattedDate}`, {
-  //       method: "GET",
-  //       headers: {
-  //         "x-rapidapi-host": "v3.football.api-sports.io",
-  //         "x-rapidapi-key": "644f87f436e0173c10c96fb8fdc49308",
-  //       },
-  //     })
-  //       .then((response) => response.json())
-  //       .then((objects) => {
-  //         setMaindata(objects.response);
-  //         console.log(objects.response);
-  //       });
-  // }, [formattedDate]);
+  useEffect(() => {
+      fetch(`https://v3.football.api-sports.io/fixtures?date=${formattedDate}`, {
+        method: "GET",
+        headers: {
+          "x-rapidapi-host": "v3.football.api-sports.io",
+          "x-rapidapi-key": "644f87f436e0173c10c96fb8fdc49308",
+        },
+      })
+        .then((response) => response.json())
+        .then((objects) => {
+          setMaindata(objects.response);
+          console.log(objects.response);
+        });
+  }, [formattedDate]);
 
   const handleSearch = (event) => {
 

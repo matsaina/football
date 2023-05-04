@@ -7,7 +7,7 @@ function FinishedMatches({ allData }) {
   useEffect(() => {
     SetFinishedData(
       allData.filter((live) => {
-        return live.fixture.status.short == "FT";
+        return live.fixture.status.short === "FT";
       })
     );
   }, [allData]);

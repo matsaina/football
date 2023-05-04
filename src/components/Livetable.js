@@ -8,9 +8,9 @@ function LiveTable({ allData }) {
     SetLiveData(
       allData.filter((live) => {
         return (
-          live.fixture.status.short == "2H" ||
-          live.fixture.status.short == "1H" ||
-          live.fixture.status.short == "HF"
+          live.fixture.status.short === "2H" ||
+          live.fixture.status.short === "1H" ||
+          live.fixture.status.short === "HF"
         );
       })
     );

@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 function MatchDetails({ allData }) {
   const { id } = useParams();
 
-  const match = allData.filter((item) => item.fixture.id == id);
+  const match = allData.filter((item) => item.fixture.id === id);
 
   const { fixture, league, teams, goals, score } = match[0];
 
@@ -85,7 +85,7 @@ fetch(`http://localhost:4000/games`, {
 
 
   } else {
-    const game = data.find((game) => game.gameid == gameid);
+    const game = data.find((game) => game.gameid === gameid);
 
     const mainid = game.id;
     let maxCommentId = 0;
@@ -121,7 +121,7 @@ fetch(`http://localhost:4000/games`, {
 
 // Delete a comment
 const deleteComment = (commentId) => {
-  const game = data.find((game) => game.gameid == gameid);
+  const game = data.find((game) => game.gameid === gameid);
   const mainid = game.id;
   const remdata = comments.filter((comment) => comment.id !== commentId);
 
@@ -143,7 +143,7 @@ const deleteComment = (commentId) => {
 
 //Delete all comments
 const deleteAll = () => {
-  const game = data.find((game) => game.gameid == gameid);
+  const game = data.find((game) => game.gameid === gameid);
   const mainid = game.id;
 
   fetch(`http://localhost:4000/games/${mainid}`, {
