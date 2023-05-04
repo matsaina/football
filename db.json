@@ -1,0 +1,82 @@
+{
+    "games": [
+      {
+        "id": 1,
+        "gameid": 456664,
+        "comments": [
+          {
+            "id": 1,
+            "user": "johndoe",
+            "comment": "This game is amazing!",
+            "timestamp": "2023-05-01T12:30:00Z"
+          },
+          {
+            "id": 2,
+            "user": "janedoe",
+            "comment": "I remember playing this when I was a kid. So much fun!",
+            "timestamp": "2023-05-02T09:15:00Z"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "gameid": 106603,
+        "comments": [
+          {
+            "id": 1,
+            "user": "janedoe",
+            "comment": "One of my all-time favorite games!",
+            "timestamp": "2023-05-01T15:45:00Z"
+          },
+          {
+            "id": 2,
+            "user": "johndoe",
+            "comment": "I love exploring the open world in this game!",
+            "timestamp": "2023-05-03T08:00:00Z"
+          }
+        ]
+      },
+      {
+        "gameid": 4566612,
+        "comments": [
+          {
+            "id": 1,
+            "user": "Anonymous",
+            "comment": "hello",
+            "timestamp": "2023-05-03T13:10:50.511Z"
+          },
+          {
+            "id": 2,
+            "user": "Anonymous",
+            "comment": "hi",
+            "timestamp": "2023-05-03T14:45:10.088Z"
+          },
+          {
+            "id": 3,
+            "user": "Anonymous",
+            "comment": "hirr",
+            "timestamp": "2023-05-03T14:45:13.058Z"
+          }
+        ],
+        "id": 3
+      },
+      {
+        "gameid": "1011815",
+        "comments": [
+          {
+            "id": 1,
+            "user": "Anonymous",
+            "comment": "winning is our way",
+            "timestamp": "2023-05-03T15:07:40.176Z"
+          },
+          {
+            "id": 2,
+            "user": "Anonymous",
+            "comment": "great game",
+            "timestamp": "2023-05-03T15:07:47.295Z"
+          }
+        ],
+        "id": 4
+      }
+    ]
+  }
