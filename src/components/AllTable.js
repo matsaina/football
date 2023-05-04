@@ -4,9 +4,6 @@ import TableCard from "./TableCard";
 
 function AllTable({allData}) {
 
-console.log('reaches');
-
-
   return (
     <>
     <h2>All Games</h2>
