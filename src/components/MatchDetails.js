@@ -23,12 +23,8 @@ function MatchDetails({ allData }) {
     awaygoals = 0;
   }
 
-  let code;
-  if (code == null) {
-    code = fixture.status.short;
-  } else {
-    code = `${fixture.status.elapsed} Mins`;
-  }
+
+ let code = `${fixture.status.elapsed} Mins`;
 
 
 //comments rest apis starts here code 
@@ -50,6 +46,7 @@ useEffect(() => {
     })
     .catch((error) => console.error(error));
 }, [gameid]);
+
 
 // Add a new comment
 const addComment = () => {
@@ -123,6 +120,7 @@ fetch(`http://localhost:4000/games`, {
 const deleteComment = (commentId) => {
   const game = data.find((game) => game.gameid == gameid);
   const mainid = game.id;
+  
   const remdata = comments.filter((comment) => comment.id !== commentId);
 
   fetch(`http://localhost:4000/games/${mainid}`, {
@@ -156,7 +154,7 @@ const deleteAll = () => {
 };
 
  return (
-    <div className="container my-4">
+    <div className="container my-4" style={{ borderRadius : "13px", backgroundColor: '#61ff61', padding: '44px' }}>
       <div className="row">
         <div className="col-12">
           <h2>{league.name}</h2>
@@ -185,7 +183,7 @@ const deleteAll = () => {
       </div>
 
 {/* comments starts here*/}
-<div className="container my-4">
+<div className="container my-4" >
   <h2 className="text-center mb-4">Comments</h2>
   <div className="row">
     <div className="col-md-8 offset-md-2">
