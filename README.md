@@ -1,3 +1,30 @@
+
+## Set Up Instructions
+
+### Installation
+To use this repo on your machine requires some simple steps
+
+- Open a terminal / command line interface on your computer
+- Clone the repo by using the following:
+
+          git@github.com:matsaina/football.git
+
+- Be patient as it creates a copy on your local machine for you.
+
+- Change directory to the repo folder:
+
+        cd football     
+
+- Install javascript dependencies
+
+        npm install
+
+- Run the React app:
+        
+        npm start
+
+
+
 ## App.js 
 states initialized 
 data is called from api
@@ -39,5 +66,9 @@ learning objectives
 - (.filter()) and (.map()) accomplished
 - (.useParams) and useMatch accomplished
 
+## Authors 
+. Michael 
 
+. Mathew
 
+. Meshack
