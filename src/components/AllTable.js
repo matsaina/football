@@ -4,14 +4,12 @@ import TableCard from "./TableCard";
 
 function AllTable({allData}) {
 
-console.log('reaches');
-
 
   return (
     <>
-    <h2>All Games</h2>
+     <h2 className="text-info">All Games</h2>
     <div className="table-responsive">
-      <table className="table table-striped table-sm">
+      <table className="table table-dark table-sm">
         <thead>
           <tr>
               <th>ID</th>
