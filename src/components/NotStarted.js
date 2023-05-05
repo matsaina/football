@@ -14,9 +14,9 @@ function NotStarted({ allData }) {
 
   return (
     <>
-      <h2>Upcoming Games</h2>
-      <div className="table-responsive">
-        <table className="table table-striped table-sm">
+      <h2 className="text-info">NotStarted Games</h2>
+    <div className="table-responsive">
+      <table className="table table-dark table-sm">
           <thead>
             <tr>
             <th>ID</th>
