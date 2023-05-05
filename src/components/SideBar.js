@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function SideBar() {
   return (
     <>
-      <nav className="col-md-2 d-none d-md-block bg-light sidebar">
+      <nav className="col-md-2 d-none d-md-block bg-dark sidebar">
         <div className="sidebar-sticky">
           <ul className="nav flex-column">
             <li className="nav-item">
