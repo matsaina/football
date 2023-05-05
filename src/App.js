@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import SideBar from "./components/SideBar";
 import NavBar from "./components/NavBar";
 import { useEffect, useState } from "react";
-import LiveTable from "./components/LiveTable";
+import LiveTable from "./components/Livetable";
 import AllTable from "./components/AllTable";
 import { Route, Routes } from "react-router-dom";
 import footballdata from "./data";
