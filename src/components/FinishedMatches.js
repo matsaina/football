@@ -14,9 +14,9 @@ function FinishedMatches({ allData }) {
 
   return (
     <>
-      <h2>Finished Games</h2>
-      <div className="table-responsive">
-        <table className="table table-striped table-sm">
+         <h2 className="text-info">Finished Games</h2>
+    <div className="table-responsive">
+      <table className="table table-dark table-sm">
           <thead>
             <tr>
             <th>ID</th>
