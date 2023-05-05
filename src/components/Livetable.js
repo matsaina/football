@@ -1,25 +1,30 @@
 import React, { useEffect, useState } from "react";
 import TableCard from "./TableCard";
 
-function FinishedMatches({ allData }) {
-  const [FinishedData, SetFinishedData] = useState([]);
+function LiveTable({ allData }) {
+  const [liveData, SetLiveData] = useState([]);
 
   useEffect(() => {
-    SetFinishedData(
+    SetLiveData(
       allData.filter((live) => {
-        return live.fixture.status.short == "FT";
+        return (
+          live.fixture.status.short == "2H" ||
+          live.fixture.status.short == "1H" ||
+          live.fixture.status.short == "HF"
+        );
       })
     );
   }, [allData]);
+  
 
   return (
     <>
-      <h2>Finished Games</h2>
+      <h2>Live Games</h2>
       <div className="table-responsive">
         <table className="table table-striped table-sm">
           <thead>
             <tr>
-            <th>ID</th>
+              <th>ID</th>
               <th style={{ textAlign: "center" }}>Home</th>
               <th>Scores</th>
               <th style={{ textAlign: "center" }}>Away</th>
@@ -29,7 +34,7 @@ function FinishedMatches({ allData }) {
             </tr>
           </thead>
           <tbody>
-            {FinishedData.map((team) => {
+            {liveData.map((team) => {
               return (
                 <>
                   <TableCard team={team} />
@@ -43,5 +48,4 @@ function FinishedMatches({ allData }) {
   );
 }
 
-export default FinishedMatches;
-
+export default LiveTable;
