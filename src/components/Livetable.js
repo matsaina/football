@@ -21,7 +21,7 @@ function LiveTable({ allData }) {
     <>
       <h2>Live Games</h2>
       <div className="table-responsive">
-        <table className="table table-striped table-sm">
+        <table className="table table-dark table-sm">
           <thead>
             <tr>
               <th>ID</th>
