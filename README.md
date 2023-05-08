@@ -3,6 +3,8 @@
 
 Football livescore app.
 
+Live URL - https://futa.netlify.com
+
 ## Description 
 Football the app display realtime updates on football matches,upcoming matches ,match statistics and other relevant information related to ongoing football matches.
 
